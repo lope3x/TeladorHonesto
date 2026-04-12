@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(TeladorHonesto WIN32 main.cpp)
 
-target_link_libraries(TeladorHonesto comctl32 winmm gdiplus)
+target_link_libraries(TeladorHonesto comctl32 winmm)
