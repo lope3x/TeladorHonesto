@@ -1,7 +1,4 @@
 #include <windows.h>
-#include <vector>
-#include <string>
-#include <fstream>
 #include <tlhelp32.h>
 #include <cstdint>
 #include <commctrl.h>
@@ -99,8 +96,6 @@ bool ScanMemory() {
             ReadProcessMemory(g_hProcess,(LPCVOID)(uintptr_t)(entity+OFF_MOB_ID),&id,4,NULL);
             for (const auto& t : g_Targets) if (t.id==id) return true;
         }
-        ReadProcessMemory(g_hProcess,(LPCVOID)(uintptr_t)node,&node,4,NULL);
-        if (node==first) break;
     }
     return false;
 }
