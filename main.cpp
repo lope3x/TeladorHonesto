@@ -214,7 +214,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp) {
                 g_Autenticado = true;
                 EnumChildWindows(hwnd, [](HWND c, LPARAM) -> BOOL { DestroyWindow(c); return TRUE; }, 0);
                 SetupMainInterface(hwnd);
-                SetWindowText(hwnd, "Teledor Honesto - Master Loader");
+                SetWindowText(hwnd, "Teledor Honesto - V2");
             } else MessageBox(hwnd, "Chave Incorreta!", "Erro", MB_ICONERROR);
         }
         if (!g_Autenticado) break;
