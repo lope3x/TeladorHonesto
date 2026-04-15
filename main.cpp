@@ -275,8 +275,8 @@ DWORD WINAPI BotLoop(LPVOID) {
             }
             if (g_BotAtivo && g_SearchAtivo && g_hGameWnd) {
                 char buf[16]; GetWindowText(g_hDelay, buf, 16); g_Delay = atoi(buf);
--
-                SendBackgroundKey(g_hGameWnd, g_TpKeys[cu-rrentIdx]);
+
+                SendBackgroundKey(g_hGameWnd, g_TpKeys[currentIdx]);
                 Sleep(g_Delay);
 
                 if (ScanMemory()) {
@@ -287,7 +287,7 @@ DWORD WINAPI BotLoop(LPVOID) {
             }
         }
         Sleep(30);
-    }-
+    }
     return 0;
 }
 
